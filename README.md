@@ -5,13 +5,21 @@ Design and Simulation of Inverting Amplifier using Op-Amp (μA741) in Proteus
 To design and simulate an Inverting Amplifier using μA741 Op-Amp in Proteus Design Suite and verify the voltage gain experimentally.
 ## Apparatus / Components Required
 S.No	Component	Specification	Quantity
+
 1	Op-Amp IC	μA741	1
+
 2	Resistor R1	10 kΩ	1
+
 3	Resistor Rf	100 kΩ	1
+
 4	Signal Generator	Sine wave, 1 kHz	1
+
 5	Dual DC Power Supply	+15V, -15V	1
+
 6	CRO / Oscilloscope	Virtual (Proteus)	1
+
 7	Connecting Wires	—	As required
+
 ## Theory
 An Inverting Amplifier is a closed-loop amplifier configuration where the input signal is applied to the inverting terminal (-) of the op-amp through resistor R1, and feedback resistor Rf is connected between output and inverting terminal.
 The non-inverting terminal (+) is grounded.
@@ -23,8 +31,23 @@ The non-inverting terminal (+) is grounded.
 •	Pin 4 → -15V
 The input sine wave is applied through R1 and output is taken from pin 6.
 ## Circuit Diagram
+
+<img width="764" height="429" alt="image" src="https://github.com/user-attachments/assets/62ec8217-596c-4d85-a0d6-2c8f0fdd334a" />
+
 ## Tabulation
 Input Voltage (Vin)	Theoretical Gain (Av)	Theoretical Vout	Practical Vout (Proteus)
+
+| Sl. No | Input Voltage (Vin)  | Condition       | Output Voltage (Vout) |
+| ------ | -------------------- | --------------- | --------------------- |
+| 1      | +2 V (positive peak) | Vin > 0         | +14 V (approx +Vsat)  |
+| 2      | +1 V                 | Vin > 0         | +14 V                 |
+| 3      | +0.1 V               | Vin > 0         | +14 V                 |
+| 4      | 0 V                  | Switching point | Changes state         |
+| 5      | –0.1 V               | Vin < 0         | –14 V (approx –Vsat)  |
+| 6      | –1 V                 | Vin < 0         | –14 V                 |
+| 7      | –2 V (negative peak) | Vin < 0         | –14 V                 |
+
+
 ## Simulation Procedure (Proteus)
 1.	Open Proteus Design Suite
 2.	Select components:
@@ -45,6 +68,9 @@ o	Input = 1V, 1kHz sine wave
 •	Output: Amplified sine wave
 •	Phase Shift: 180°
 •	Gain ≈ -10
+
+<img width="767" height="468" alt="image" src="https://github.com/user-attachments/assets/96ea9932-1977-43ea-85a5-9406dc9eebc5" />
+
 ## Result
 The Inverting Amplifier using μA741 Op-Amp was successfully designed and simulated in Proteus.
 The practical output voltage closely matches the theoretical value.
